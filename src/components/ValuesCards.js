@@ -133,7 +133,7 @@ export default function ValuesCards() {
             <div className="outro-info-section">
               <div className="map-container">
                 <iframe 
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=23+Taralea+Bay+NE+Calgary+AB+T3J+5H1"
+                  src="https://maps.google.com/maps?q=23+Taralea+Bay+NE+Calgary+AB+T3J+5H1&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%" 
                   height="300" 
                   style={{border: 0}} 
