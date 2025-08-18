@@ -9,17 +9,17 @@ import PhotoCarousel from "@/components/PhotoCarousel";
 const NurturingMothers = () => {
   const carouselImages = [
     {
-      src: "/images/programs/program2.png",
+      src: "/images/programs/program20.jpg",
       alt: "Nurturing Mothers Program - Parenting Support"
     },
     {
-      src: "/images/programs/program4.png",
+      src: "/images/programs/program21.jpg",
       alt: "Nurturing Mothers Program - Cultural Connection"
     },
     {
-      src: "/images/programs/program5.png",
+      src: "/images/programs/program22.jpg",
       alt: "Nurturing Mothers Program - Life Skills"
-    }
+    },
   ];
 
   return (

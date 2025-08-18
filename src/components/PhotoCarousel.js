@@ -81,7 +81,7 @@ const PhotoCarousel = ({ images }) => {
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
               fill
-              className="object-contain"
+              className="object-cover"
               priority={currentIndex === 0}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
             />

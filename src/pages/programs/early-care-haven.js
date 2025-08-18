@@ -12,15 +12,19 @@ const FramerImage = motion(Image);
 const EarlyCareHaven = () => {
   const carouselImages = [
     {
-      src: "/images/programs/program2hero.png",
+      src: "/images/programs/program16.jpg",
       alt: "Early Care Haven - Safe Environment"
     },
     {
-      src: "/images/programs/program2.png",
+      src: "/images/programs/program17.jpg",
       alt: "Early Care Haven - Early Development"
     },
     {
-      src: "/images/programs/program3.png",
+      src: "/images/programs/program18.jpg",
+      alt: "Early Care Haven - Family Support"
+    },
+    {
+      src: "/images/programs/program19.jpg",
       alt: "Early Care Haven - Family Support"
     }
   ];

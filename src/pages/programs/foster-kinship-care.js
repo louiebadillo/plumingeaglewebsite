@@ -10,15 +10,15 @@ import PhotoCarousel from "@/components/PhotoCarousel";
 const FosterKinshipCare = () => {
   const carouselImages = [
     {
-      src: "/images/programs/programkinship.jpeg",
+      src: "/images/programs/program2hero.jpeg",
       alt: "Foster/Kinship Care Program - Family Connection"
     },
     {
-      src: "/images/programs/program6.png",
+      src: "/images/programs/programkinship.jpeg",
       alt: "Foster/Kinship Care Program - Cultural Support"
     },
     {
-      src: "/images/programs/program7.png",
+      src: "/images/programs/program20.jpg",
       alt: "Foster/Kinship Care Program - Community Integration"
     }
   ];

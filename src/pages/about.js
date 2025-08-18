@@ -42,19 +42,29 @@ export default function About() {
   // Sample carousel images - you can replace these with your actual images
   const carouselImages = [
     {
-      src: "/images/image1.jpg",
+      src: "/images/programs/programkinship.jpeg",
       alt: "Pluming Eagle Lodge Facility",
-      caption: "Our welcoming facility provides a safe and nurturing environment"
+      caption: "Community and engagement"
     },
     {
-      src: "/images/image2.jpg", 
+      src: "/images/programs/program14.jpeg", 
       alt: "Youth Activities",
       caption: "Engaging activities that promote growth and development"
     },
     {
-      src: "/images/image3.jpg",
+      src: "/images/programs/program10.jpeg",
       alt: "Community Support",
-      caption: "Building strong connections within our community"
+      caption: "Safe and comfortable environment for children and youth"
+    },
+    {
+      src: "/images/programs/program6.jpeg",
+      alt: "Community Support",
+      caption: "Our programs are designed to support the needs of the community"
+    },
+    {
+      src: "/images/programs/program11.jpeg",
+      alt: "Community Support",
+      caption: "We provide a safe and supportive environment for children and youth"
     }
   ];
 
@@ -100,7 +110,7 @@ export default function About() {
           </div>
 
           {/* Counters Section - Under About Us */}
-          <div className="w-full mb-16">
+          <div className="w-full mb-1">
             <div className="grid w-full grid-cols-3 gap-8 sm:grid-cols-1">
               <div className="flex flex-col items-center justify-center text-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl mb-4">
@@ -133,9 +143,10 @@ export default function About() {
 
           <ValuesCards />
 
-          <HireMe />
+          
         </Layout>
         </main>
+        <HireMe />
       </SmoothScroll>
     </>
   );

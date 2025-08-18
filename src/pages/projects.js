@@ -7,8 +7,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { HireMe2 } from "@/components/HireMe2";
 
-import proj1 from "../../public/images/articles/Clay-Gatsby-theme.webp";
-import loading from "../../public/images/articles/GTA6-VICE.gif";
+import proj1 from "../../public/images/programs/program6.jpeg";
 
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion, useMotionValue } from "framer-motion";
@@ -63,27 +62,7 @@ const MovingImg = ({ title, img, link }) => {
   );
 };
 
-const Article = ({ img, title, date, link }) => {
-  return (
-    <motion.li
-      initial={{ y: 200 }}
-      whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
-      viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-2 rounded-xl flex sm:flex-col justify-between 
-      bg-light text-dark first:mt-0 border border-solid border-dark
-      border-r-4 border-b-4 dark:bg-dark dark:border-light
-      "
-    >
-      <MovingImg img={img} title={title} link={link} />
-      <span
-        className="text-primary font-semibold dark:text-primaryDark min-w-max pl-4 sm:self-start 
-      sm:pl-0 xs:text-sm"
-      >
-        {date}
-      </span>
-    </motion.li>
-  );
-};
+
 
 const FeaturedProject = ({
   type,
@@ -284,43 +263,20 @@ export default function Projects() {
             </div>
           </div>
 
-          <div>
-            <ul className="flex flex-col items-center relative pt-16">
-              <Article
-                title="Adding more soon, thanks for the interest!"
-                img={loading}
-                time="1 min read"
-                date=""
-                link="https://github.com/lilxyzz/"
-              />
-            </ul>
-
-            <div className="mt-2 flex items-center justify-between gap-3 grid-cols-2">
-              <Link
-                href="/articles/"
-                target={"_self"}
-                className={`flex items-center rounded-lg border-2 border-solid bg-light p-2.5 px-6 text-lg font-semibold
-            capitalize text-dark hover:border-light hover:bg-dark hover:text-light 
-            dark:bg-dark dark:text-light dark:hover:bg-light dark:hover:text-dark
-            md:p-2 md:px-4 md:text-base
-             `}
-              >
-                View Articles
-              </Link>
-              <Link
-                href="/about/"
-                target={"_self"}
-                className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
+          <div className="mt-16 flex items-center justify-center">
+            <Link
+              href="/about/"
+              target={"_self"}
+              className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
             capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
             dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
             md:p-2 md:px-4 md:text-base
              `}
-              >
-                Get To Know Me
-              </Link>
-            </div>
-            <HireMe2 />
+            >
+              Get To Know Me
+            </Link>
           </div>
+          <HireMe2 />
         </Layout>
       </main>
     </>

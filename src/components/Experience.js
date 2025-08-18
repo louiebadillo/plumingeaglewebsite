@@ -76,7 +76,7 @@ const Experience = () => {
           />
         </ul>
       </div>
-      <div className="mt-40 flex items-center justify-between gap-3 grid-cols-2">
+      <div className="mt-40 flex items-center justify-center">
         <Link
           href="/projects/"
           target={"_self"}
@@ -87,17 +87,6 @@ const Experience = () => {
              `}
         >
           View Projects
-        </Link>
-        <Link
-          href="/articles/"
-          target={"_self"}
-          className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
-            capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
-            dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
-            md:p-2 md:px-4 md:text-base
-             `}
-        >
-          View Articles
         </Link>
       </div>
     </div>

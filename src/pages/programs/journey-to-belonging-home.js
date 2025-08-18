@@ -12,17 +12,21 @@ const FramerImage = motion(Image);
 const JourneyToBelongingHome = () => {
   const carouselImages = [
     {
-      src: "/images/programs/journey-to-belonging.jpg",
+      src: "/images/programs/program8.jpeg",
       alt: "Journey to Belonging Home - Cultural Activities"
     },
     {
-      src: "/images/programs/program11.png",
+      src: "/images/programs/program11.jpeg",
       alt: "Journey to Belonging Home - Learning Environment"
     },
     {
-      src: "/images/programs/program2.png",
+      src: "/images/programs/program2.jpeg",
       alt: "Journey to Belonging Home - Community Support"
-    }
+    },
+    {
+        src: "/images/programs/program15.jpeg",
+        alt: "Journey to Belonging Home - Community Support"
+    },
   ];
 
   return (
