@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
   MediumIcon,
@@ -76,7 +75,7 @@ const Navbar = () => {
 
   return (
     <header
-      className="w-full flex items-center justify-between px-32 pt-10 pb-8 font-medium dark:text-light
+      className="w-full flex items-center justify-between px-32 pt-12 pb-12 font-medium dark:text-light
     lg:px-16 relative z-1 md:px-12 sm:px-8
     "
     >
@@ -105,62 +104,20 @@ const Navbar = () => {
         ></span>
       </button>
 
-      <div className="w-full flex justify-between items-center lg:hidden">
+      <div className="w-full flex justify-center items-center lg:hidden relative">
+        {/* Navigation in the center */}
         <nav className="flex items-center justify-center">
-          <CustomLink className="mr-4" href="/" title="Home" />
-          <CustomLink className="mx-4" href="/about" title="About" />
-          <CustomLink className="mx-4" href="/projects" title="Projects" />
-          <CustomLink className="ml-4" href="/articles" title="Articles" />
+          <CustomLink className="mr-6" href="/" title="Home" />
+          <CustomLink className="mx-6" href="/about" title="About" />
+          <CustomLink className="mx-6" href="/programs" title="Programs" />
+          <CustomLink className="ml-6" href="/contact" title="Contact" />
         </nav>
-        <nav
-          className="flex items-center justify-center flex-wrap lg:mt-2
-      "
-        >
-          <motion.a
-            target={"_blank"}
-            className="w-7 mr-3"
-            href="https://github.com/lilxyzz"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label="Checkout my GitHub profile"
-          >
-            <GithubIcon />
-          </motion.a>
 
-          <motion.a
-            target={"_blank"}
-            className="w-7 mx-3 bg-light rounded-full"
-            href="https://medium.com/@travis.lord"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label="Checkout my Medium profile"
-          >
-            <MediumIcon />
-          </motion.a>
-
-          <motion.a
-            target={"_blank"}
-            className="w-7 mx-3"
-            href="https://dev.to/lilxyzz"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label="Checkout my Dev.to profile"
-          >
-            <DevIcon />
-          </motion.a>
-
-          <motion.a
-            target={"_blank"}
-            className="w-7 mx-3"
-            href="https://dev.to/lilxyzz"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label="My Dev.to profile"
-          ></motion.a>
-
+        {/* Theme switcher on the right */}
+        <div className="flex items-center absolute right-0">
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`w-7 h-7 ease ml-3 flex items-center justify-center rounded-full p-1  
+            className={`w-7 h-7 ease flex items-center justify-center rounded-full p-1  
             ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}
             `}
             aria-label="theme-switcher"
@@ -171,7 +128,7 @@ const Navbar = () => {
               <MoonIcon className={"fill-dark"} />
             )}
           </button>
-        </nav>
+        </div>
       </div>
       {isOpen ? (
         <motion.div
@@ -198,14 +155,8 @@ const Navbar = () => {
             <CustomMobileLink
               toggle={handleClick}
               className="mx-4 lg:m-0 lg:my-2"
-              href="/projects"
-              title="Projects"
-            />
-            <CustomMobileLink
-              toggle={handleClick}
-              className="ml-4 lg:m-0 lg:my-2"
-              href="/articles"
-              title="Articles"
+              href="/programs"
+              title="Programs"
             />
             <CustomMobileLink
               toggle={handleClick}
@@ -214,53 +165,10 @@ const Navbar = () => {
               title="Contact"
             />
           </nav>
-          <nav
-            className="flex items-center justify-center  mt-2
-      "
-          >
-            <motion.a
-              target={"_blank"}
-              className="w-6 mr-3"
-              href="https://github.com/lilxyzz"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Checkout my Github profile"
-            >
-              <GithubIcon />
-            </motion.a>
-
-            <motion.a
-              target={"_blank"}
-              className="w-6 mx-3 bg-light rounded-full"
-              href="https://medium.com/@travis.lord"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Checkout my Medium profile"
-            >
-              <MediumIcon />
-            </motion.a>
-            <motion.a
-              target={"_blank"}
-              className="w-6 mx-3"
-              href="https://dev.to/lilxyzz"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Checkout my Dev.to profile"
-            >
-              <DevIcon />
-            </motion.a>
-            <motion.a
-              target={"_blank"}
-              className="w-6 mx-3"
-              href="https://dev.to/lilxyzz"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="My Dev.to profile"
-            ></motion.a>
-
+          <div className="flex items-center justify-center mt-4">
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`w-6 h-6 ease m-1 ml-3 sm:mx-1 flex items-center justify-center rounded-full p-1  
+              className={`w-6 h-6 ease flex items-center justify-center rounded-full p-1  
             ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}
             `}
               aria-label="theme-switcher"
@@ -271,13 +179,11 @@ const Navbar = () => {
                 <MoonIcon className={"fill-dark"} />
               )}
             </button>
-          </nav>
+          </div>
         </motion.div>
       ) : null}
 
-      <div className="absolute left-[50%] top-2 translate-x-[-50%] ">
-        <Logo />
-      </div>
+
     </header>
   );
 };

@@ -50,7 +50,7 @@ const PhotoCarousel = ({ images }) => {
 
   return (
     <div className="w-full">
-      <div className="relative h-[600px] md:h-[500px] sm:h-[400px] overflow-hidden border-2 border-solid border-dark dark:border-light bg-light dark:bg-dark">
+      <div className="relative h-[700px] md:h-[600px] sm:h-[500px] overflow-hidden border-2 border-solid border-dark dark:border-light bg-light dark:bg-dark">
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentIndex}
@@ -81,7 +81,7 @@ const PhotoCarousel = ({ images }) => {
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
               fill
-              className="object-cover"
+              className="object-contain"
               priority={currentIndex === 0}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
             />

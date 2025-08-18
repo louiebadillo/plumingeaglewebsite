@@ -21,37 +21,40 @@ export default function About() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const myForm = e.target;
-    const formData = new FormData(myForm);
+    const formData = new FormData(e.target);
+    
     try {
-      const response = await fetch("/", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams(formData).toString(),
+        body: formData,
       });
 
       if (response.ok) {
-        // Handle success, e.g., redirect to a thank you page
-        router.push("/thanks");
+        const result = await response.json();
+        if (result.success) {
+          // Clear form
+          setFormData({ name: "", email: "", message: "" });
+          // Show success message (you can add a toast notification here)
+          alert("Thank you for your message! We'll get back to you soon.");
+        } else {
+          alert("There was an error sending your message. Please try again.");
+        }
       } else {
-        // Handle error
-        console.error("Form submission failed!", response);
+        alert("There was an error sending your message. Please try again.");
       }
     } catch (error) {
-      // Handle error
       console.error("An error occurred during form submission:", error);
+      alert("There was an error sending your message. Please try again.");
     }
   };
 
   return (
     <>
       <Head>
-        <title>NexTemp Built with Nextjs</title>
+        <title>Contact Us | Pluming Eagle Lodge</title>
         <meta
           name="description"
-          content="NexTemp, A open-source portfolio theme built with Nextjs"
+          content="Get in touch with Pluming Eagle Lodge. We're here to support you and answer any questions about our programs and services."
         />
       </Head>
 
@@ -61,9 +64,8 @@ export default function About() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="Begin Today,
-I'm One Message Away 👋"
-            className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+            text="Get In Touch"
+            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8"
           />
 
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl border border-solid border-dark bg-light p-6 shadow-2xl dark:border-light dark:bg-dark xs:p-4">
@@ -74,24 +76,34 @@ I'm One Message Away 👋"
               </h2>
 
               <div className="w-full"></div>
-              <p className="">
-                My inbox is always open. Whether you have a question or just
-                want to say hello, I'll try my best to get back to you! Feel
-                free to message me about any relevant project updates.
+              <p className="text-lg leading-relaxed">
+                We're here to support you and your family. Whether you have questions about our programs, 
+                need information about enrollment, or want to learn more about how we can help, 
+                please don't hesitate to reach out. Our team is ready to assist you with compassion and understanding.
               </p>
             </div>
             <div className="relative col-span-4 h-max xl:col-span-4 md:col-span-8 md:order-2">
               <div className="grid w-full grid-cols-2 sm:gap-6 relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl border  border-solid  border-dark bg-light p-6   dark:border-light dark:bg-dark xs:p-4">
                 <div className="col-span-8 h-max xl:col-span-6 md:col-span-8 md:order-2">
                   <form
-                    name="contact-form"
+                    action="https://api.web3forms.com/submit"
                     method="POST"
                     onSubmit={handleSubmit}
                   >
                     <input
                       type="hidden"
-                      name="form-name"
-                      value="contact-form"
+                      name="access_key"
+                      value="YOUR-WEB3FORMS-ACCESS-KEY"
+                    />
+                    <input
+                      type="hidden"
+                      name="subject"
+                      value="New Contact Form Submission - Pluming Eagle Lodge"
+                    />
+                    <input
+                      type="hidden"
+                      name="redirect"
+                      value="https://web3forms.com/success"
                     />
                     <p className="hidden">
                       <label>
@@ -100,11 +112,12 @@ I'm One Message Away 👋"
                       </label>
                     </p>
                     <div className="col-span-1 p-2">
-                      <label className="block text-sm font-medium text-dark dark:text-light">
-                        Your Name:
+                      <label className="block text-sm font-medium text-dark/75 dark:text-light">
+                        Full Name:
                         <input
                           type="text"
                           name="name"
+                          value={formData.name}
                           required
                           autoComplete="name"
                           className="mt-1 p-2 w-full border border-solid border-dark rounded-md bg-light dark:border-light dark:bg-dark dark:text-light"
@@ -115,10 +128,11 @@ I'm One Message Away 👋"
 
                     <div className="col-span-1 p-2">
                       <label className="block text-sm font-medium text-dark/75 dark:text-light/75">
-                        Your Email:
+                        Email Address:
                         <input
                           type="email"
                           name="email"
+                          value={formData.email}
                           required
                           autoComplete="off"
                           className="mt-1 p-2 w-full border border-solid border-dark rounded-md bg-light dark:border-light dark:bg-dark dark:text-light"
@@ -132,10 +146,11 @@ I'm One Message Away 👋"
                         htmlFor="message"
                         className="block text-sm font-medium text-dark/75 dark:text-light/75"
                       >
-                        Message:
+                        How Can We Help You?:
                         <textarea
                           name="message"
                           id="message"
+                          value={formData.message}
                           required
                           rows="4"
                           className="mt-1 p-2 w-full border border-solid border-dark rounded-md bg-light dark:border-light dark:bg-dark dark:text-light"
@@ -149,7 +164,7 @@ I'm One Message Away 👋"
                         type="submit"
                         className="px-4 py-2 font-bold capitalize text-light bg-dark border border-2 border-solid border-dark dark:border-light dark:bg-light rounded-md hover:bg-transparent hover:text-dark dark:hover:text-light dark:hover:bg-dark dark:hover:border-light dark:hover:bg-dark dark:text-dark dark:hover:text-light"
                       >
-                        Send it!
+                        Send Message
                       </button>
                     </div>
                   </form>

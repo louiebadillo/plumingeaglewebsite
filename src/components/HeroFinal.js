@@ -50,7 +50,7 @@ export default function HeroFinal() {
               Learn About Us
             </Link>
             <Link
-              href="/projects/"
+              href="/programs/"
               target={"_self"}
               className={`flex items-center rounded-lg border-2 border-solid border-white p-3 px-8 text-lg font-semibold
         capitalize text-white hover:bg-white hover:text-dark 

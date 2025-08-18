@@ -2,6 +2,7 @@ import { HireMe } from "@/components/HireMe";
 import Head from "next/head";
 import TransitionEffect from "@/components/TransitionEffect";
 import HeroFinal from "@/components/HeroFinal";
+import FloatingLogo from "@/components/FloatingLogo";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       </Head>
 
       <TransitionEffect />
+      
+      <FloatingLogo />
       
       {/* Hero Section */}
       <HeroFinal />
