@@ -143,6 +143,8 @@ export default function About() {
 
           <ValuesCards />
 
+          {/* Add bottom margin to prevent footer overlap */}
+          <div className="mb-48 sm:mb-32"></div>
           
         </Layout>
         </main>

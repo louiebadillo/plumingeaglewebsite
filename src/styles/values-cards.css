@@ -134,7 +134,7 @@ p {
 }
 
 .outro {
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 8rem 2rem;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -318,6 +318,7 @@ background-color: #204d61;
   display: flex;
   gap: 2rem;
   margin-top: 3rem;
+  margin-bottom: 4rem;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -412,10 +413,20 @@ background-color: #204d61;
     margin-bottom: 1rem;
   }
 
+  /* Add bottom margin for mobile to prevent footer overlap */
+  .cards {
+    margin-bottom: 4rem;
+  }
+
+  .outro {
+    margin-bottom: 2rem;
+  }
+
   .outro-buttons {
     flex-direction: column;
     gap: 1rem;
     margin-top: 2rem;
+    margin-bottom: 6rem;
   }
 
   .outro-button {
@@ -425,7 +436,7 @@ background-color: #204d61;
   }
 
   .outro {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 6rem 1rem;
   }
 
   .outro-paragraph {

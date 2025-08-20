@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-300 dark:bg-gray-300 text-center text-lg-start text-muted pt-5 pb-10 px-10 sm:px-4 xs:px-2 relative">
+    <footer className="bg-gray-300 dark:bg-gray-300 text-center text-lg-start text-muted pt-5 pb-10 px-10 sm:px-4 xs:px-2 relative mt-16">
       {/* Main Content Section */}
       <section className="">
         <div className="container mx-auto px-4 text-center mt-5">
@@ -88,7 +88,7 @@ const Footer = () => {
       </section>
 
       {/* Copyright Section */}
-      <div className="text-center p-4 bg-gray-300 dark:bg-gray-300 w-full absolute bottom-0 left-0 sm:p-2">
+      <div className="text-center p-4 bg-gray-300 dark:bg-gray-300 w-full sm:p-2">
         <span className="text-sm sm:text-xs">© {new Date().getFullYear()} Copyright:
         <Link href="/" className="text-dark font-bold ml-1">
           Pluming Eagle Lodge
