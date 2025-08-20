@@ -17,7 +17,7 @@ const Card = ({ title, copy, index }) => {
           <p>{copy}</p>
         </div>
         <div className="card-img">
-          <img src={`/images/image${(index % 3) + 1}.jpg`} alt={title} />
+          <img src={`/images/image${(index % 4) + 1}.jpg`} alt={title} />
         </div>
       </div>
     </div>

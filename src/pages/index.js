@@ -4,6 +4,7 @@ import TransitionEffect from "@/components/TransitionEffect";
 import HeroFinal from "@/components/HeroFinal";
 import FloatingLogo from "@/components/FloatingLogo";
 import ProgramsOverview from "@/components/ProgramsOverview";
+import TestimonialSlider from "@/components/TestimonialSlider";
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
       
       {/* Programs Overview Section */}
       <ProgramsOverview />
+      
+      {/* Testimonial Slider Section */}
+      <TestimonialSlider />
       
       <HireMe />
     </>
