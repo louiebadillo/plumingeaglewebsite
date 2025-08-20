@@ -49,6 +49,14 @@ export default function ValuesCards() {
   useGSAP(
     () => {
       const cards = gsap.utils.toArray(".card");
+      const isMobile = window.innerWidth <= 768;
+
+      // Disable complex animations on mobile for better performance
+      if (isMobile) {
+        return () => {
+          ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        };
+      }
 
       ScrollTrigger.create({
         trigger: cards[0],

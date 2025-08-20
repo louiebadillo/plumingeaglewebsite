@@ -50,7 +50,7 @@ const PhotoCarousel = ({ images }) => {
 
   return (
     <div className="w-full">
-      <div className="relative h-[700px] md:h-[600px] sm:h-[500px] overflow-hidden border-2 border-solid border-dark dark:border-light bg-light dark:bg-dark">
+      <div className="relative h-[700px] md:h-[600px] sm:h-[400px] xs:h-[300px] overflow-hidden border-2 border-solid border-dark dark:border-light bg-light dark:bg-dark">
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentIndex}
@@ -86,8 +86,8 @@ const PhotoCarousel = ({ images }) => {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
             />
             {images[currentIndex].caption && (
-              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
-                <p className="text-sm md:text-base font-medium">{images[currentIndex].caption}</p>
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 sm:p-4">
+                <p className="text-xs sm:text-sm md:text-base font-medium">{images[currentIndex].caption}</p>
               </div>
             )}
           </motion.div>
@@ -95,18 +95,18 @@ const PhotoCarousel = ({ images }) => {
 
         {/* Navigation Arrows */}
         <button
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 dark:bg-dark dark:bg-opacity-80 dark:hover:bg-opacity-100 rounded-full p-2 transition-all duration-300 z-10"
+          className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 dark:bg-dark dark:bg-opacity-80 dark:hover:bg-opacity-100 rounded-full p-1 sm:p-2 transition-all duration-300 z-10"
           onClick={() => paginate(-1)}
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         <button
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 dark:bg-dark dark:bg-opacity-80 dark:hover:bg-opacity-100 rounded-full p-2 transition-all duration-300 z-10"
+          className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 dark:bg-dark dark:bg-opacity-80 dark:hover:bg-opacity-100 rounded-full p-1 sm:p-2 transition-all duration-300 z-10"
           onClick={() => paginate(1)}
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>

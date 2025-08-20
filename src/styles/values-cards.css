@@ -162,6 +162,12 @@ p {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 768px) {
+  .map-container iframe {
+    height: 250px;
+  }
+}
+
 .business-info {
   display: flex;
   flex-direction: column;
@@ -246,6 +252,8 @@ p {
   border-radius: 0.75em;
   overflow: hidden;
   min-height: 400px;
+  max-height: 500px;
+  position: relative;
 }
 
 #card-1 .card-inner {
@@ -266,6 +274,11 @@ background-color: #204d61;
 
 #card-4 {
   height: 70vh;
+  overflow: hidden;
+}
+
+#card-4 .card-img {
+  max-height: 400px;
 }
 
 .outro-buttons {
@@ -326,32 +339,42 @@ background-color: #204d61;
 
   .card-inner {
     flex-direction: column;
-    gap: 2em;
-    padding: 1.5em;
+    gap: 1em;
+    padding: 1em;
+    align-items: center;
   }
 
   .card-img {
     display: block;
     aspect-ratio: 16/9;
-    min-height: 200px;
+    min-height: 120px;
+    max-height: 200px;
+    width: 100%;
+    order: 1;
+    overflow: hidden;
   }
 
   .card-content {
     text-align: center;
+    order: 2;
+    width: 100%;
   }
 
   .card-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .card-content p {
-    font-size: 1.25rem;
+    font-size: 0.9rem;
     display: block;
+    line-height: 1.4;
   }
 
   .card {
-    height: 300px;
+    height: auto;
+    min-height: 200px;
+    margin-bottom: 1rem;
   }
 
   .outro-buttons {
@@ -361,8 +384,8 @@ background-color: #204d61;
   }
 
   .outro-button {
-    padding: 0.875rem 1.5rem;
-    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
     justify-content: center;
   }
 
@@ -371,57 +394,76 @@ background-color: #204d61;
   }
 
   .outro-paragraph {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
+    line-height: 1.6;
   }
 
   .outro-info-section {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-bottom: 2rem;
   }
 
   .business-info h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .info-item {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   .info-item span {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .intro {
-    padding: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
   }
 
   .intro h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
   }
 
   .intro p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .impact-stats {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    gap: 1rem;
+    margin-top: 1rem;
   }
 
   .impact-item {
-    padding: 1rem;
+    padding: 0.75rem;
   }
 
   .impact-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .impact-item p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Mobile-specific fixes */
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .card {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-inner {
+    position: relative;
+    z-index: 1;
   }
   
 

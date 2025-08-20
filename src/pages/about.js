@@ -86,32 +86,32 @@ export default function About() {
           <Layout className="pt-16">
           <AnimatedText
             text="Helping Youth to Path of Independence"
-            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8"
+            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-3xl xs:!text-2xl sm:mb-8"
           />
 
           {/* Photo Carousel Section - Full Width */}
-          <div className="w-full mb-16">
+          <div className="w-full mb-16 sm:mb-8">
             <PhotoCarousel images={carouselImages} />
           </div>
 
                     {/* About Us Section - Full Width */}
-          <div className="w-full mb-16">
-            <h2 className="mb-8 text-4xl font-bold uppercase text-dark/75 dark:text-light/75 text-center md:text-3xl sm:text-2xl">
+          <div className="w-full mb-16 sm:mb-8">
+            <h2 className="mb-8 text-4xl font-bold uppercase text-dark/75 dark:text-light/75 text-center md:text-3xl sm:text-2xl xs:text-xl">
               About Us
             </h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xl font-medium mb-6 leading-relaxed md:text-lg sm:text-base">
+            <div className="max-w-4xl mx-auto px-4 sm:px-2">
+              <p className="text-xl font-medium mb-6 leading-relaxed md:text-lg sm:text-base xs:text-sm">
                 Founded in 2020 in Alberta, Canada, Pluming Eagle Lodge began as a dedicated non-institutional group home facility with the mission to provide a safe and supportive environment for children and youth in need. As we continued to support these young individuals, we saw their needs grow and evolve. In response, we expanded our programs to offer even greater support for their journey into adulthood.
               </p>
-              <p className="text-xl font-medium leading-relaxed md:text-lg sm:text-base">
+              <p className="text-xl font-medium leading-relaxed md:text-lg sm:text-base xs:text-sm">
                 We are committed to providing necessary tools, guidance, and opportunities to empower children, youth, and families, ensuring they have the resources to lead independent, successful lives. Our growth is driven by a deep commitment to making a meaningful difference in the lives of those we serve, supporting their development, independence and connection to their communities.
               </p>
             </div>
           </div>
 
           {/* Counters Section - Under About Us */}
-          <div className="w-full mb-1">
-            <div className="grid w-full grid-cols-3 gap-8 sm:grid-cols-1">
+          <div className="w-full mb-16 sm:mb-8">
+            <div className="grid w-full grid-cols-3 gap-8 sm:grid-cols-1 sm:gap-6">
               <div className="flex flex-col items-center justify-center text-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl mb-4">
                   <AnimatedNumberFramerMotion value={1688} />+
