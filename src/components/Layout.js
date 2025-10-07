@@ -1,13 +1,11 @@
 import React from "react";
-import FloatingLogo from "./FloatingLogo";
 
 const Layout = ({ children, className = "" }) => {
   return (
     <>
-      <FloatingLogo />
       <div
-        className={`z-0 inline-block h-full w-full bg-light p-32 dark:bg-dark xl:p-24 lg:p-16 
-        md:p-12 sm:p-8 ${className}`}
+        className={`z-0 inline-block h-full w-full px-32 xl:px-24 lg:px-16 
+        md:px-12 sm:px-8 pt-40 xl:pt-32 lg:pt-24 md:pt-20 sm:pt-16 pb-8 md:pb-6 sm:pb-4 ${className}`}
       >
         {children}
       </div>

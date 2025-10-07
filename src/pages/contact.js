@@ -4,14 +4,16 @@ import Head from "next/head";
 import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
 import { useRouter } from "next/router";
+import BackgroundSection from "@/components/BackgroundSection";
 
-// Netlify Form config
 
 export default function About() {
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
+    reason: "",
     message: "",
   });
 
@@ -59,28 +61,31 @@ export default function About() {
       </Head>
 
       <TransitionEffect />
-      <main
-        className={`flex w-full flex-col items-center justify-center dark:text-light`}
-      >
-        <Layout className="pt-16">
+      
+      <main className={`flex w-full flex-col items-center justify-center dark:text-light`}>
+        <BackgroundSection attachment="fixed" image="/images/sky.jpg">
+        <Layout className="pt-16 mb-24">
           <AnimatedText
             text="Get In Touch"
-            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8"
+            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8 text-center"
           />
 
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl border border-solid border-dark bg-light p-6 shadow-2xl dark:border-light dark:bg-dark xs:p-4">
             <div className="absolute top-0 -right-5 -z-10 h-[103%] w-[101.5%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
             <div className="col-span-4 flex flex-col items-start justify-start xl:col-span-4 md:order-1 md:col-span-8">
-              <h2 className="my-4 text-2xl font-bold capitalize text-primaryDark dark:text-primaryDark">
-                What’s Next?
+              <h2 className="my-4 text-2xl font-bold capitalize text-primaryDark dark:text-primaryDark text-center w-full">
+                We'd love to hear from you
               </h2>
 
               <div className="w-full"></div>
-              <p className="text-lg leading-relaxed">
-                We're here to support you and your family. Whether you have questions about our programs, 
-                need information about enrollment, or want to learn more about how we can help, 
-                please don't hesitate to reach out. Our team is ready to assist you with compassion and understanding.
+              <p className="text-lg leading-relaxed text-center">
+                Have questions about our programs or need help getting started? Our team is here to support you. Reach out and we’ll respond as soon as possible.
               </p>
+              <div className="mt-32 text-xl text-dark/80 dark:text-light/90 w-full">
+                <div>Phone: (403) 807-6088</div>
+                <div>Email: info@plumingeaglelodge.com</div>
+                <div>Address: 4715 88 Ave NE #2205, Calgary, AB T3J 2J2</div>
+              </div>
             </div>
             <div className="relative col-span-4 h-max xl:col-span-4 md:col-span-8 md:order-2">
               <div className="grid w-full grid-cols-2 sm:gap-6 relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl border  border-solid  border-dark bg-light p-6   dark:border-light dark:bg-dark xs:p-4">
@@ -142,6 +147,40 @@ export default function About() {
                     </div>
 
                     <div className="col-span-1 p-2">
+                      <label className="block text-sm font-medium text-dark/75 dark:text-light/75">
+                        Phone Number:
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          autoComplete="tel"
+                          className="mt-1 p-2 w-full border border-solid border-dark rounded-md bg-light dark:border-light dark:bg-dark dark:text-light"
+                          onChange={handleChange}
+                        />
+                      </label>
+                    </div>
+
+                    <div className="col-span-1 p-2">
+                      <label className="block text-sm font-medium text-dark/75 dark:text-light/75">
+                        Reason for Contact:
+                        <select
+                          name="reason"
+                          value={formData.reason}
+                          className="mt-1 p-2 w-full border border-solid border-dark rounded-md bg-light dark:border-light dark:bg-dark dark:text-light"
+                          onChange={handleChange}
+                        >
+                          <option value="">Select a reason</option>
+                          <option value="Journey to Belonging Home">Journey to Belonging Home</option>
+                          <option value="Early Care Haven">Early Care Haven</option>
+                          <option value="Nurturing Mothers Program">Nurturing Mothers Program</option>
+                          <option value="Foster/Kinship Care Program">Foster/Kinship Care Program</option>
+                          <option value="Inquiry">Inquiry</option>
+                          <option value="Others">Others</option>
+                        </select>
+                      </label>
+                    </div>
+
+                    <div className="col-span-1 p-2">
                       <label
                         htmlFor="message"
                         className="block text-sm font-medium text-dark/75 dark:text-light/75"
@@ -173,7 +212,10 @@ export default function About() {
             </div>
           </div>
         </Layout>
+        </BackgroundSection>
       </main>
+      
+      {/* Background section removed below contact form */}
     </>
   );
 }

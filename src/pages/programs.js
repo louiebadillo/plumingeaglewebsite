@@ -1,10 +1,10 @@
-import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "@/components/AnimatedText";
+import BackgroundSection from "@/components/BackgroundSection";
 
 const FramerImage = motion(Image);
 
@@ -80,78 +80,62 @@ const Programs = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
-        <Layout className="pt-16">
-          <AnimatedText
-            text="Our Programs"
-            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-3xl xs:!text-2xl sm:mb-8"
-          />
-          
-          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-y-16 sm:gap-x-0">
-            {programs.map((program, index) => (
-              <div key={index} className="col-span-12">
-                <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:border-light dark:bg-dark xs:p-4 h-[600px] sm:h-auto sm:min-h-[500px]">
-                  <div className="w-full grid grid-cols-12 gap-8 lg:gap-4 h-full">
-                    <div className="col-span-6 flex flex-col items-start justify-start lg:col-span-12 h-full">
-                      <span className="inline-block text-lg font-medium text-primary dark:text-primaryDark lg:text-base md:text-sm xs:text-xs">
-                        {program.ageRange}
-                      </span>
-                      <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl sm:text-2xl xs:text-xl">
-                        {program.title}
-                      </h2>
-                      <p className="my-2 font-medium text-dark dark:text-light sm:text-sm xs:text-xs">
-                        {program.summary}
-                      </p>
-                      
-                      <div className="mt-4">
-                        <h3 className="text-lg font-semibold mb-2 sm:text-base xs:text-sm">Key Features:</h3>
-                        <ul className="list-disc list-inside space-y-1">
-                          {program.keyPoints.map((point, pointIndex) => (
-                            <li key={pointIndex} className="text-sm text-dark/75 dark:text-light/75 xs:text-xs">
-                              {point}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="mt-6 flex items-center gap-4 sm:gap-2 sm:flex-col sm:items-start">
-                        <Link
-                          href={`/programs/${program.slug}`}
-                          className="rounded-lg border-2 border-solid border-dark bg-dark p-2.5 px-6 text-lg font-semibold capitalize text-light hover:bg-light hover:text-dark dark:border-light dark:bg-light dark:text-dark dark:hover:bg-dark dark:hover:text-light lg:p-2 lg:px-4 lg:text-base sm:p-2 sm:px-4 sm:text-sm"
-                        >
-                          Learn More
-                        </Link>
-                        <Link
-                          href="/contact"
-                          className="rounded-lg border-2 border-solid border-dark p-2.5 px-6 text-lg font-semibold capitalize text-dark hover:bg-dark hover:text-light dark:border-light dark:text-light dark:hover:bg-light dark:hover:text-dark lg:p-2 lg:px-4 lg:text-base sm:p-2 sm:px-4 sm:text-sm"
-                        >
-                          Contact Us
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="col-span-6 relative rounded-lg overflow-hidden lg:col-span-12 h-full">
-                      <FramerImage
-                        src={program.image}
-                        alt={program.title}
-                        className="w-full h-full object-cover"
-                        width={500}
-                        height={300}
-                        priority
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
-                      {program.comingSoon && (
-                        <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium sm:text-xs sm:px-2 sm:py-1">
-                          Coming Soon
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </article>
-              </div>
-            ))}
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+        <BackgroundSection attachment="fixed">
+          <div className="pt-16 px-8 md:px-12 lg:px-16 xl:px-24 w-full">
+            <AnimatedText
+              text="Our Programs"
+              className="mt-12 mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-3xl xs:!text-2xl sm:mb-8 text-center"
+            />
           </div>
-        </Layout>
+            <div className="w-full px-4">
+              <div className="grid grid-cols-3 gap-8">
+                {programs.map((program, index) => {
+                  const badge = program.comingSoon ? "Coming Soon" : program.ageRange || "";
+                  return (
+                    <article key={index} className="relative bg-white dark:bg-dark rounded-xl flex flex-col">
+                      {/* Image */}
+                      <div className="relative h-56 w-full rounded-lg overflow-visible">
+                        <FramerImage
+                          src={program.image}
+                          alt={program.title}
+                          className="w-full h-full object-cover"
+                          width={800}
+                          height={450}
+                          priority
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                        {/* Protruding bubble badge */}
+                        {badge && (
+                          <div className="absolute -top-3 left-4 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+                            {badge}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-4 flex-1 flex flex-col">
+                        <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">{program.title}</h3>
+                        <div id={`program-details-${index}`} className="mt-4 border-t border-gray-200 dark:border-white/10 pt-4">
+                          <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">{program.summary}</p>
+                          <h4 className="text-sm font-semibold text-gray-800 dark:text-white mb-2">Key Features</h4>
+                          <ul className="list-disc list-inside space-y-1">
+                            {program.keyPoints.map((point, pointIndex) => (
+                              <li key={pointIndex} className="text-sm text-gray-700 dark:text-gray-300">{point}</li>
+                            ))}
+                          </ul>
+                          <div className="mt-4 flex items-center gap-3">
+                            <Link href={`/programs/${program.slug}`} className="px-4 py-2 rounded-md bg-[#0d2834] text-white text-sm font-semibold hover:opacity-90">Learn More</Link>
+                            <Link href="/contact" className="px-4 py-2 rounded-md border border-[#0d2834] text-[#0d2834] text-sm font-semibold hover:bg-[#0d2834] hover:text-white transition">Contact Us</Link>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+        </BackgroundSection>
       </main>
     </>
   );

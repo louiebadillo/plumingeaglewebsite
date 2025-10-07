@@ -8,6 +8,7 @@ import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
 import { GithubIcon } from "@/components/Icons";
 import { DevIcon } from "@/components/Icons";
+import BackgroundSection from "@/components/BackgroundSection";
 
 import proj1 from "/public/images/image1.jpg";
 
@@ -56,6 +57,7 @@ export default function About() {
       <main
         className={`flex  w-full flex-col items-center justify-center dark:text-light`}
       >
+        <BackgroundSection attachment="fixed" className="w-full">
         <Layout className="pt-16">
           <AnimatedText
             text="Clay - Gatsby Theme"
@@ -150,6 +152,7 @@ export default function About() {
             </div>
           </div>
         </Layout>
+        </BackgroundSection>
       </main>
     </>
   );

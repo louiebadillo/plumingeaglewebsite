@@ -4,6 +4,7 @@ import Link from "next/link";
 import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "@/components/AnimatedText";
 import PhotoCarousel from "@/components/PhotoCarousel";
+import BackgroundSection from "@/components/BackgroundSection";
 
 
 const NurturingMothers = () => {
@@ -32,29 +33,30 @@ const NurturingMothers = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+        <BackgroundSection attachment="fixed">
         <Layout className="pt-16">
           <AnimatedText
             text="Nurturing Mothers Program"
-            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8"
+            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8 text-center"
           />
           
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-4 flex flex-col items-start justify-start xl:col-span-4 lg:col-span-8 md:order-2">
-              <h2 className="mb-4 text-left text-3xl font-bold uppercase text-dark/75 dark:text-light/75 lg:text-2xl xs:text-xl">
+              <h2 className="mb-4 text-center text-3xl font-bold uppercase text-white lg:text-2xl xs:text-xl">
                 Young Mothers
               </h2>
               
-              <p className="my-4 font-medium text-dark dark:text-light">
+              <p className="my-4 font-medium text-gray-100">
                 The Nurturing Mothers Program is a culturally grounded initiative designed specifically to support Indigenous young mothers in their journey toward healing, parenting, and personal growth. This program recognizes the unique challenges faced by young mothers and provides comprehensive support to help them build stable, nurturing environments for themselves and their children.
               </p>
               
-              <p className="my-4 font-medium text-dark dark:text-light">
+              <p className="my-4 font-medium text-gray-100">
                 Our approach includes culturally safe parenting mentorship that honors traditional Indigenous parenting practices while incorporating modern best practices. We provide gentle routines that support security and growth for both mother and child. The program focuses on life skills development and self-care planning, recognizing that a mother's well-being is essential to her child's development.
               </p>
 
               <h3 className="text-2xl font-bold mt-8 mb-4">Program Features</h3>
-              <ul className="list-disc list-inside space-y-2 text-dark dark:text-light">
+              <ul className="list-disc list-inside space-y-2 text-gray-100">
                 <li><strong>24/7 Supervision:</strong> Round-the-clock support and guidance</li>
                 <li><strong>Culturally Safe Parenting Mentorship:</strong> Guidance that honors Indigenous traditions</li>
                 <li><strong>Gentle Routines:</strong> Structured daily activities that promote security and growth</li>
@@ -86,6 +88,7 @@ const NurturingMothers = () => {
             </div>
           </div>
         </Layout>
+        </BackgroundSection>
       </main>
     </>
   );

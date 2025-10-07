@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ReactLenis } from "lenis/react";
 
 gsap.registerPlugin(useGSAP);
@@ -106,42 +106,29 @@ export default function ValuesCards() {
   return (
     <ReactLenis root>
       <div className="app" ref={container}>
-        <section className="intro">
-          <h1>Our Impact</h1>
-          <div className="impact-stats">
-            <div className="impact-item">
-              <span className="impact-icon">📈</span>
-              <p>Expanded to 6 holistic programs supporting Indigenous children, youth, and families from birth to adulthood</p>
-            </div>
-            <div className="impact-item">
-              <span className="impact-icon">🧡</span>
-              <p>Supported 100+ children and youth in culturally grounded, trauma-informed environments that promote healing and growth</p>
-            </div>
-            <div className="impact-item">
-              <span className="impact-icon">🪶</span>
-              <p>Partnered with Elders and communities to restore identity, belonging, and traditional wisdom</p>
-            </div>
-            <div className="impact-item">
-              <span className="impact-icon">🏠</span>
-              <p>Provided safe, nurturing homes that prioritize emotional healing, education, cultural connection, and independence</p>
-            </div>
-          </div>
-        </section>
         <section className="cards">
           {cards.map((card, index) => (
             <Card key={index} {...card} index={index} />
           ))}
         </section>
-        <section className="outro">
-          <div className="outro-content">
-            <p className="outro-paragraph">
-              At Pluming Eagle Lodge, we are committed to creating lasting positive change in the lives of children, youth, and families. Our dedicated team works tirelessly to provide the support, guidance, and opportunities needed for every individual to thrive and reach their full potential.
-            </p>
-            
+        <section 
+          className="outro"
+          style={{
+            backgroundImage: 'url(/pelbackground.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'local'
+          }}
+        >
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+          <div className="outro-content relative z-10">
+            <h2 className="text-white text-4xl font-semibold text-center mt-32 mb-16">Our Contact Information</h2>
             <div className="outro-info-section">
               <div className="map-container">
                 <iframe 
-                  src="https://maps.google.com/maps?q=23+Taralea+Bay+NE+Calgary+AB+T3J+5H1&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=4715+88+Ave+NE+%232205+Calgary+AB+T3J+2J2&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%" 
                   height="300" 
                   style={{border: 0}} 
@@ -153,13 +140,12 @@ export default function ValuesCards() {
               </div>
               
               <div className="business-info">
-                <h3>Contact Information</h3>
-                                 <div className="info-item">
+                <div className="info-item">
                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                      <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                    </svg>
-                   <span>23 Taralea Bay NE<br />Calgary, AB T3J 5H1</span>
+                   <span>4715 88 Ave NE #2205<br />Calgary, AB T3J 2J2</span>
                  </div>
                  
                  <div className="info-item">
@@ -182,15 +168,9 @@ export default function ValuesCards() {
             <div className="outro-buttons">
               <a href="/programs" className="outro-button programs-btn">
                 <span>Our Programs</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
               </a>
-              <a href="/careers" className="outro-button careers-btn">
-                <span>Join Our Team</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+              <a href="/contact" className="outro-button careers-btn">
+                <span>Contact Us</span>
               </a>
             </div>
           </div>

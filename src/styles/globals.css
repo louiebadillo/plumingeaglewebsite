@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Primary background color from pelbackground.jpg top section */
+/* Replace #YOUR_COLOR_CODE with the actual hex color you extracted */
+:root {
+  --primary-bg-color: #dfe5e3;
+}
+
+body {
+  background-color: var(--primary-bg-color) !important;
+}
+
+/* Remove any dark mode overrides */
+html, body, main {
+  background-color: var(--primary-bg-color) !important;
+}
+
 
 
 /* Alternative gradient options - uncomment one if you want to try different colors */

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "@/components/AnimatedText";
 import PhotoCarousel from "@/components/PhotoCarousel";
+import BackgroundSection from "@/components/BackgroundSection";
 
 const FramerImage = motion(Image);
 
@@ -39,30 +40,31 @@ const JourneyToBelongingHome = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+        <BackgroundSection attachment="fixed">
         <Layout className="pt-16">
 
           <AnimatedText
             text="Journey to Belonging Home"
-            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8"
+            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8 text-center"
           />
           
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-4 flex flex-col items-start justify-start xl:col-span-4 lg:col-span-8 md:order-2">
-              <h2 className="mb-4 text-left text-3xl font-bold uppercase text-dark/75 dark:text-light/75 lg:text-2xl xs:text-xl">
+              <h2 className="mb-4 text-center text-3xl font-bold uppercase text-white lg:text-2xl xs:text-xl">
                 Ages 5 to 17
               </h2>
               
-              <p className="my-4 font-medium text-dark dark:text-light">
+              <p className="my-4 font-medium text-gray-100">
                 Our Journey to Belonging Home program provides a comprehensive, culturally safe environment for Indigenous children and youth aged 5 to 17. This program is designed to support healing from trauma while developing essential life skills and building a strong cultural identity.
               </p>
               
-              <p className="my-4 font-medium text-dark dark:text-light">
+              <p className="my-4 font-medium text-gray-100">
                 Each child receives personalized care with individualized healing plans that address their unique needs and circumstances. The program includes academic and vocational guidance to support educational success and future career planning. Additionally, we provide life skills training and financial literacy education to prepare youth for independent living.
               </p>
 
               <h3 className="text-2xl font-bold mt-8 mb-4">Program Features</h3>
-              <ul className="list-disc list-inside space-y-2 text-dark dark:text-light">
+              <ul className="list-disc list-inside space-y-2 text-gray-100">
                 <li><strong>24/7 Supervision:</strong> Round-the-clock care and support in a safe, nurturing environment</li>
                 <li><strong>Personalized Care:</strong> Individualized healing plans tailored to each child's unique needs</li>
                 <li><strong>Academic & Vocational Guidance:</strong> Support for educational success and career planning</li>
@@ -94,6 +96,7 @@ const JourneyToBelongingHome = () => {
             </div>
           </div>
         </Layout>
+        </BackgroundSection>
       </main>
     </>
   );

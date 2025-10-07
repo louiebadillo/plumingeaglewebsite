@@ -4,6 +4,7 @@ import Link from "next/link";
 import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "@/components/AnimatedText";
 import PhotoCarousel from "@/components/PhotoCarousel";
+import BackgroundSection from "@/components/BackgroundSection";
 
 
 
@@ -33,33 +34,34 @@ const FosterKinshipCare = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+        <BackgroundSection attachment="fixed">
         <Layout className="pt-16">
           <AnimatedText
             text="Foster/Kinship Care Program"
-            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8"
+            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8 text-center"
           />
           
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-4 flex flex-col items-start justify-start xl:col-span-4 lg:col-span-8 md:order-2">
-              <div className="mb-4 inline-block rounded-lg bg-primary px-4 py-2 text-white">
+              <div className="mb-4 inline-block rounded-lg bg-red-600 px-4 py-2 text-white">
                 Coming Soon
               </div>
               
-              <h2 className="mb-4 text-left text-3xl font-bold uppercase text-dark/75 dark:text-light/75 lg:text-2xl xs:text-xl">
+              <h2 className="mb-4 text-center text-3xl font-bold uppercase text-white lg:text-2xl xs:text-xl">
                 Culturally Safe Foster Care
               </h2>
               
-              <p className="my-4 font-medium text-dark dark:text-light">
+              <p className="my-4 font-medium text-gray-100">
                 Our Foster/Kinship Care Program represents an innovative approach to culturally safe foster care that prioritizes emotional well-being, identity strengthening, and cultural connection. This program will place children with culturally aware families who understand and respect Indigenous traditions and values.
               </p>
               
-              <p className="my-4 font-medium text-dark dark:text-light">
+              <p className="my-4 font-medium text-gray-100">
                 We will provide ongoing cultural awareness training for foster parents to ensure they can effectively support the cultural needs of the children in their care. The program will facilitate access to Elders, community events, and cultural activities to maintain and strengthen cultural identity. Additionally, we will offer culturally guided reunification planning that respects traditional family structures and community relationships.
               </p>
 
               <h3 className="text-2xl font-bold mt-8 mb-4">Program Features</h3>
-              <ul className="list-disc list-inside space-y-2 text-dark dark:text-light">
+              <ul className="list-disc list-inside space-y-2 text-gray-100">
                 <li><strong>Culturally Aware Families:</strong> Placement with families who understand Indigenous traditions</li>
                 <li><strong>Cultural Awareness Training:</strong> Ongoing education for foster parents</li>
                 <li><strong>Elder Access:</strong> Connection to community Elders and cultural activities</li>
@@ -91,6 +93,7 @@ const FosterKinshipCare = () => {
             </div>
           </div>
         </Layout>
+        </BackgroundSection>
       </main>
     </>
   );

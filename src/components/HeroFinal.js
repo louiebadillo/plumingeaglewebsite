@@ -8,7 +8,7 @@ export default function HeroFinal() {
       {/* Optimized Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/image2.jpg"
+          src="/images/banff.jpg"
           alt="Pluming Eagle Lodge Hero Background"
           fill
           priority

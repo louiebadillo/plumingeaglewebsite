@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "@/components/AnimatedText";
 import PhotoCarousel from "@/components/PhotoCarousel";
+import BackgroundSection from "@/components/BackgroundSection";
 
 const FramerImage = motion(Image);
 
@@ -39,29 +40,30 @@ const EarlyCareHaven = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
+      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+        <BackgroundSection attachment="fixed">
         <Layout className="pt-16">
           <AnimatedText
             text="Early Care Haven"
-            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8"
+            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8 text-center"
           />
           
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
             <div className="col-span-4 flex flex-col items-start justify-start xl:col-span-4 lg:col-span-8 md:order-2">
-              <h2 className="mb-4 text-left text-3xl font-bold uppercase text-dark/75 dark:text-light/75 lg:text-2xl xs:text-xl">
+              <h2 className="mb-4 text-center text-3xl font-bold uppercase text-white lg:text-2xl xs:text-xl">
                 Ages 0 to 6
               </h2>
               
-              <p className="my-4 font-medium text-dark dark:text-light">
+              <p className="my-4 font-medium text-gray-100">
                 Early Care Haven is our specialized program for children aged 0 to 6, providing a safe and supportive emergency home environment. This program places a strong emphasis on early development, attachment, and health and wellness services.
               </p>
               
-              <p className="my-4 font-medium text-dark dark:text-light">
+              <p className="my-4 font-medium text-gray-100">
                 We understand the critical importance of early childhood development and work to support family reintegration whenever possible. Our approach includes facilitating access to early developmental assessments to ensure each child's needs are properly identified and addressed. We maintain gentle routines that support security and growth, creating a stable environment for our youngest children.
               </p>
 
               <h3 className="text-2xl font-bold mt-8 mb-4">Program Features</h3>
-              <ul className="list-disc list-inside space-y-2 text-dark dark:text-light">
+              <ul className="list-disc list-inside space-y-2 text-gray-100">
                 <li><strong>24/7 Supervision:</strong> Continuous care and monitoring in a safe environment</li>
                 <li><strong>Early Developmental Assessments:</strong> Access to professional evaluations and support</li>
                 <li><strong>Gentle Routines:</strong> Structured daily activities that promote security and growth</li>
@@ -93,6 +95,7 @@ const EarlyCareHaven = () => {
             </div>
           </div>
         </Layout>
+        </BackgroundSection>
       </main>
     </>
   );
