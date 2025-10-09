@@ -2,12 +2,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import {
-  MediumIcon,
-  DevIcon,
-  GithubIcon,
-  LinkedInIcon,
-} from "./Icons";
 import { motion } from "framer-motion";
 
 const CustomLink = ({ href, title, className = "" }) => {
@@ -118,7 +112,7 @@ const Navbar = () => {
 
       <div className="flex-1 flex justify-center items-center lg:hidden relative">
         {/* Navigation in the center */}
-        <nav className="flex items-center justify-center space-x-8 -ml-20">
+        <nav className="flex items-center justify-center space-x-16 -ml-20">
           <CustomLink className="text-lg font-semibold" href="/" title="Home" />
           <CustomLink className="text-lg font-semibold" href="/about" title="About" />
           <CustomLink className="text-lg font-semibold" href="/programs" title="Programs" />
