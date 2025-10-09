@@ -35,7 +35,7 @@ export default function Home() {
             Ready to Make a Difference?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Join us in our mission to support Indigenous children, youth, and families. 
+            Join us in our mission to support children, youth, and families. 
             Together, we can create lasting positive change in our communities.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">

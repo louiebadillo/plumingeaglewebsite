@@ -202,18 +202,18 @@ p {
   font-weight: 600;
   font-style: normal;
   font-family: "Rethink Sans", sans-serif;
-  margin-bottom: 2rem;
-  text-align: right;
+  margin-bottom: 4rem;
+  text-align: center;
   color: #0d2834;
 }
 
 .card-content p {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 400;
   font-style: normal;
   font-family: "Rethink Sans", sans-serif;
-  line-height: 1.6;
-  margin: 0;
+  line-height: 1.2;
+  margin: 2rem;
   color: #333;
 }
 
@@ -240,7 +240,7 @@ p {
 }
 
 #card-4 .card-inner {
-  background-color: #ab6334;
+  background-color: var(--primary-bg-color);
 }
 
 #card-4 {
@@ -249,7 +249,7 @@ p {
 }
 
 #card-4 .card-img {
-  max-height: 400px;
+  height: 80%;
 }
 
 .outro-buttons {

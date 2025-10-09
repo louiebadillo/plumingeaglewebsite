@@ -6,36 +6,30 @@ const TestimonialSlider = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      role: "Parent",
-      content: "Pluming Eagle Lodge has been a blessing for our family. The cultural programs and trauma-informed care have helped my children heal and reconnect with their identity. The staff truly understands our needs.",
+      name: "[hidden]",
+      role: "Previous Youth in Care",
+      content: "Thank you for all the hard work. I am still alive because of all the support and advice that you gave me and now I realize that people really care about me. I'm blessed to be in your care. Thank you for treating me like family - Christmas and New Year card to staff member",
 
     },
     {
       id: 2,
-      name: "Michael Chen",
-      role: "Community Partner",
-      content: "The work Pluming Eagle Lodge does is transformative. Their commitment to cultural safety and holistic care sets a new standard for supporting Indigenous families. I've seen incredible positive changes in the children they serve.",avatar: "/images/profile/Riley.png"
+      name: "[hidden]",
+      role: "Former Youth in Care",
+      content: "This holiday may be different for me but I don't care because I have you to guide me in the right path and I'm also surrounded by people who love me and care a whole lot for me. I wanna thank you for everything you do for us! - Christmas and New Year card to staff member",
     },
     {
       id: 3,
-      name: "Elder Grace Williams",
-      role: "Cultural Advisor",
-      content: "As an Elder working with Pluming Eagle Lodge, I've witnessed the deep respect they have for traditional ways. They create spaces where our children can learn, grow, and embrace their cultural heritage with pride.",
+      name: "[hidden]",
+      role: "Former Youth in Care",
+      content: "Whenever I ran I felt relief, at first, the I just ran to get out. The staff whenever I was brought back welcomed me with a warm smile and a hello. No yelling or hitting which was something I was used to. I took advantage of the kindness which i know now I regret. Instead of being focused on keeping my reputation and drinking, I should've focused on myself. I would lash out to those around me which was the staff who did nothing but help me all the time. My behaviour was unacceptable and if I could I would apologize to them. -- Letter to staff member",
+
 
     },
     {
       id: 4,
-      name: "David Thompson",
-      role: "Former Youth",
-      content: "Growing up at Pluming Eagle Lodge taught me resilience, cultural pride, and the importance of community. The skills and support I received here continue to guide me in my adult life. I'm forever grateful.",
-
-    },
-    {
-      id: 5,
-      name: "Lisa Rodriguez",
-      role: "Social Worker",
-      content: "The comprehensive approach at Pluming Eagle Lodge is exceptional. They address not just immediate needs but create lasting foundations for healing and growth. Their programs are truly life-changing.",
+      name: "L.P. ",
+      role: "Program Guest Instructor",
+      content: "The comprehensive approach at Pluming Eagle Lodge is exceptional. They address not just immediate needs but create lasting foundations for healing and growth. They help youth develop life skills and get them ready for independent living while fostering a strong cultural identity.",
 
     }
   ];
@@ -72,10 +66,9 @@ const TestimonialSlider = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6">
-            What People Say
+            Letters from our youth and community members
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Hear from families, community partners, and those who have experienced the transformative impact of our programs.
           </p>
         </div>
 
@@ -101,16 +94,16 @@ const TestimonialSlider = () => {
                     </blockquote>
 
                     {/* Author Info */}
-                    <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                      </div>
+                    <div className="flex justify-end gap-4">
                       <div>
-                        <h4 className="text-lg font-semibold text-gray-800 dark:text-white">
+                        <h4 className="text-lg font-semibold text-gray-800 dark:text-white text-right">
                           {testimonial.name}
                         </h4>
-                        <p className="text-gray-600 dark:text-gray-300">
+                        <p className="text-sm text-gray-600 dark:text-gray-300 text-right">
                           {testimonial.role}
                         </p>
+                      </div>
+                      <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
                       </div>
                     </div>
                   </div>

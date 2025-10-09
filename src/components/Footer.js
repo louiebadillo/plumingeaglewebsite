@@ -1,12 +1,8 @@
 import Link from "next/link";
 import React from "react";
-import { useRouter } from "next/router";
-import BackgroundSection from "./BackgroundSection";
+
 
 const Footer = () => {
-  const router = useRouter();
-  const isContactPage = router.pathname === '/contact';
-
   return (
     <>
       <footer className="text-center text-lg-start text-white pt-5 pb-10 px-10 sm:px-4 xs:px-2 relative" style={{backgroundColor: '#0d2834'}}>
