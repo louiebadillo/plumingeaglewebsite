@@ -83,12 +83,8 @@ const ImpactSection = () => {
           {impactItems.map((item, index) => (
             <motion.div
               key={index}
-              className="flex items-start gap-4 p-6 border-l-4 border-[#87afb1] bg-white bg-opacity-90 rounded-r-lg hover:bg-opacity-95 transition-all duration-300 backdrop-blur-sm"
+              className="flex items-start gap-4 p-6 border-l-4 border-[#87afb1] bg-white bg-opacity-90 rounded-r-lg backdrop-blur-sm"
               variants={itemVariants}
-              whileHover={{ 
-                scale: 1.02,
-                transition: { duration: 0.2 }
-              }}
             >
               <div className="flex-shrink-0 w-2 h-2 bg-[#87afb1] rounded-full mt-3"></div>
               <p className="text-lg text-gray-800 leading-relaxed">
