@@ -58,7 +58,7 @@ export default function About() {
       <TransitionEffect />
       <SmoothScroll>
         <main
-          className={`flex  w-full flex-col items-center justify-center dark:text-light`}
+          className={`flex  w-full flex-col items-center justify-center`}
         >
           <Layout className="pt-16">
             <AnimatedText
@@ -74,7 +74,7 @@ export default function About() {
 
           {/* About Us Section - Full Width */}
           <div className="w-full mb-16 sm:mb-8 px-4 sm:px-2">
-            <h2 className="mb-8 text-4xl font-bold uppercase text-dark/75 dark:text-light/75 text-center md:text-3xl sm:text-2xl xs:text-xl">
+            <h2 className="mb-8 text-4xl font-bold uppercase text-dark/75 text-center md:text-3xl sm:text-2xl xs:text-xl">
               About Us
             </h2>
             <div className="max-w-4xl mx-auto">

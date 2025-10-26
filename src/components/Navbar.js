@@ -65,7 +65,8 @@ const Navbar = () => {
   };
 
   return (
-    <header
+    <>
+      <header
       className="w-full flex items-center justify-between px-32 py-4 font-medium
     lg:px-16 fixed top-0 left-0 z-50 md:px-12 sm:px-8
     backdrop-blur-sm border-b border-white/20
@@ -87,7 +88,7 @@ const Navbar = () => {
 
       <button
         type="button"
-        className=" flex-col items-center justify-center hidden lg:flex z-9"
+        className=" flex-col items-center justify-center hidden sm:flex lg:hidden z-9"
         aria-controls="mobile-menu"
         aria-expanded={isOpen}
         onClick={handleClick}
@@ -120,55 +121,56 @@ const Navbar = () => {
         </nav>
 
       </div>
-      {isOpen ? (
-        <motion.div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-dark/90 backdrop-blur-md p-6 overflow-y-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          aria-modal="true"
-          role="dialog"
-        >
-          {/* Close button */}
-          <button
-            onClick={handleClick}
-            aria-label="Close menu"
-            className="absolute top-4 right-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
-          >
-            ✕
-          </button>
-          <div className="w-full max-w-sm my-16">
-          <nav className="flex items-center justify-center flex-col space-y-6 text-white">
-            <CustomMobileLink
-              toggle={handleClick}
-              className="text-xl font-semibold"
-              href="/"
-              title="Home"
-            />
-            <CustomMobileLink
-              toggle={handleClick}
-              className="text-xl font-semibold"
-              href="/about"
-              title="About"
-            />
-            <CustomMobileLink
-              toggle={handleClick}
-              className="text-xl font-semibold"
-              href="/programs"
-              title="Programs"
-            />
-            <CustomMobileLink
-              toggle={handleClick}
-              className="text-xl font-semibold"
-              href="/contact"
-              title="Contact"
-            />
-          </nav>
-          </div>
-        </motion.div>
-      ) : null}
-
-
     </header>
+    
+    {/* Mobile Menu Modal - Outside header for full screen coverage */}
+    {isOpen ? (
+      <motion.div
+        className="fixed top-0 left-0 right-0 bottom-0 w-full h-full z-[100] flex items-start justify-center bg-dark/90 backdrop-blur-md pt-24 px-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        aria-modal="true"
+        role="dialog"
+      >
+        {/* Close button */}
+        <button
+          onClick={handleClick}
+          aria-label="Close menu"
+          className="absolute top-4 right-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
+        >
+          ✕
+        </button>
+        <div className="w-full max-w-4xl">
+        <nav className="flex items-center justify-center flex-col space-y-8 text-white">
+          <CustomMobileLink
+            toggle={handleClick}
+            className="text-xl font-semibold"
+            href="/"
+            title="Home"
+          />
+          <CustomMobileLink
+            toggle={handleClick}
+            className="text-xl font-semibold"
+            href="/about"
+            title="About"
+          />
+          <CustomMobileLink
+            toggle={handleClick}
+            className="text-xl font-semibold"
+            href="/programs"
+            title="Programs"
+          />
+          <CustomMobileLink
+            toggle={handleClick}
+            className="text-xl font-semibold"
+            href="/contact"
+            title="Contact"
+          />
+        </nav>
+        </div>
+      </motion.div>
+    ) : null}
+    </>
   );
 };
 

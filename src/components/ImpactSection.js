@@ -60,12 +60,21 @@ const ImpactSection = () => {
         backgroundAttachment: 'fixed'
       }}
     >
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      {/* Mobile background override - force light background on mobile */}
+      <div 
+        className="absolute inset-0 md:hidden" 
+        style={{ 
+          backgroundColor: 'var(--primary-bg-color) !important',
+          backgroundImage: 'none !important'
+        }}
+      ></div>
+      
+      {/* Overlay for better text readability - hidden on mobile */}
+      <div className="absolute inset-0 bg-black bg-opacity-40 hidden md:block"></div>
       
       <div className="container mx-auto px-4 max-w-4xl relative z-10">
         <motion.h2 
-          className="text-4xl font-bold text-center mb-12 text-white"
+          className="text-4xl font-bold text-center mb-12 text-gray-800 md:text-white"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}

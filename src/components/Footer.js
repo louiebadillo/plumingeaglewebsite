@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
 
             {/* Useful Links Column */}
-            <div className="mx-auto mb-4 sm:mb-6">
+            <div className="mx-auto mb-4 sm:mb-6 ml-24">
               <h6 className="text-uppercase font-bold mb-4 text-left text-lg sm:text-base">Useful Links</h6>
               <p className="mb-2 text-left text-base sm:text-sm">
                 <Link href="/" className="text-white/80 hover:text-white transition-colors">
@@ -62,7 +62,7 @@ const Footer = () => {
             </div>
 
             {/* Contact Column */}
-            <div className="mx-auto mb-4 sm:mb-6">
+            <div className="mx-auto mb-4 sm:mb-6 ml-24">
               <h6 className="text-uppercase font-bold mb-4 text-left text-lg sm:text-base">Contact</h6>
               <p className="mb-2 flex items-start text-base sm:text-sm text-white">
                 <svg className="w-4 h-4 mr-3 mt-0.5 flex-shrink-0 text-white" fill="currentColor" viewBox="0 0 20 20">
