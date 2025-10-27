@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "@/components/AnimatedText";
 import PhotoCarousel from "@/components/PhotoCarousel";
+import BackgroundSection from "@/components/BackgroundSection";
 import SEO from "@/components/SEO";
 
 const FramerImage = motion(Image);
