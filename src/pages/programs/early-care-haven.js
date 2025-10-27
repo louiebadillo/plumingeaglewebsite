@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "@/components/AnimatedText";
 import PhotoCarousel from "@/components/PhotoCarousel";
-import BackgroundSection from "@/components/BackgroundSection";
+import SEO from "@/components/SEO";
 
 const FramerImage = motion(Image);
 
@@ -32,13 +32,13 @@ const EarlyCareHaven = () => {
 
   return (
     <>
-      <Head>
-        <title>Early Care Haven | Pluming Eagle Lodge</title>
-        <meta
-          name="description"
-          content="Providing a safe and supportive emergency home environment for children aged 0-6, with emphasis on early development, attachment, and family reintegration."
-        />
-      </Head>
+      <SEO
+        title="Early Care Haven | Indigenous Early Childhood Program Alberta"
+        description="Providing a safe and supportive emergency home environment for our youngest children aged 0-6, with emphasis on early development, attachment, and family reintegration."
+        keywords="Indigenous early childhood care Alberta, emergency home ages 0-6, early development programs, family reintegration support, attachment-based care Indigenous children"
+        ogUrl="https://plumingeaglelodge.com/programs/early-care-haven"
+        canonicalUrl="https://plumingeaglelodge.com/programs/early-care-haven"
+      />
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <BackgroundSection attachment="fixed">

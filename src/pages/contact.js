@@ -5,6 +5,7 @@ import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
 import { useRouter } from "next/router";
 import BackgroundSection from "@/components/BackgroundSection";
+import SEO from "@/components/SEO";
 
 
 export default function About() {
@@ -52,13 +53,13 @@ export default function About() {
 
   return (
     <>
-      <Head>
-        <title>Contact Us | Pluming Eagle Lodge</title>
-        <meta
-          name="description"
-          content="Get in touch with Pluming Eagle Lodge. We're here to support you and answer any questions about our programs and services."
-        />
-      </Head>
+      <SEO
+        title="Contact Us | Pluming Eagle Lodge - Get Support Today"
+        description="Reach out to Pluming Eagle Lodge for program information or support. Phone: (403) 807-6088 | Email: info@plumingeaglelodge.com | Calgary, Alberta"
+        keywords="contact Indigenous services Alberta, Calgary child support, youth program inquiries, Indigenous child care contact, Alberta youth services phone"
+        ogUrl="https://plumingeaglelodge.com/contact"
+        canonicalUrl="https://plumingeaglelodge.com/contact"
+      />
 
       <TransitionEffect />
       
@@ -88,7 +89,7 @@ export default function About() {
               </div>
             </div>
             <div className="relative col-span-4 h-max xl:col-span-4 md:col-span-8 md:order-2">
-              <div className="grid w-full grid-cols-2 sm:gap-6 relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl border  border-solid  border-dark bg-light p-6 xs:p-4">
+              <div className="grid w-full grid-cols-2 sm:gap-6 relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl border border-solid border-dark bg-light p-6 xs:p-4">
                 <div className="col-span-8 h-max xl:col-span-6 md:col-span-8 md:order-2">
                   <form
                     action="https://api.web3forms.com/submit"

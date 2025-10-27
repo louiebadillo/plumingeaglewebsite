@@ -3,8 +3,13 @@ import Script from "next/script";
 
 export default function Document() {
   return (
-    <Html lang="en-AU">
+    <Html lang="en-CA">
       <Head>
+        <meta charSet="UTF-8" />
+        <meta name="theme-color" content="#dfe5e3" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Pluming Eagle Lodge" />
+        
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,opsz,wght@0,14..16,300..800;1,14..16,300..800&display=swap" rel="stylesheet" />

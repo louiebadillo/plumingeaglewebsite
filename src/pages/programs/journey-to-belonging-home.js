@@ -7,6 +7,7 @@ import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "@/components/AnimatedText";
 import PhotoCarousel from "@/components/PhotoCarousel";
 import BackgroundSection from "@/components/BackgroundSection";
+import SEO from "@/components/SEO";
 
 const FramerImage = motion(Image);
 
@@ -32,13 +33,13 @@ const JourneyToBelongingHome = () => {
 
   return (
     <>
-      <Head>
-        <title>Journey to Belonging Home | Pluming Eagle Lodge</title>
-        <meta
-          name="description"
-          content="A nurturing, culturally safe environment where Indigenous children and youth aged 5-17 receive support to heal from trauma, develop life skills, and build a strong cultural identity."
-        />
-      </Head>
+      <SEO
+        title="Journey to Belonging Home | Indigenous Youth Program Alberta"
+        description="A nurturing, culturally safe environment where Indigenous children and youth aged 5-17 receive support to heal from trauma, develop life skills, and build a strong cultural identity."
+        keywords="Indigenous youth program Alberta, trauma-informed care ages 5-17, cultural identity programs, life skills training Indigenous youth, academic support Indigenous children"
+        ogUrl="https://plumingeaglelodge.com/programs/journey-to-belonging-home"
+        canonicalUrl="https://plumingeaglelodge.com/programs/journey-to-belonging-home"
+      />
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <BackgroundSection attachment="fixed">

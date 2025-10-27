@@ -4,7 +4,7 @@ import Link from "next/link";
 import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "@/components/AnimatedText";
 import PhotoCarousel from "@/components/PhotoCarousel";
-import BackgroundSection from "@/components/BackgroundSection";
+import SEO from "@/components/SEO";
 
 
 
@@ -26,13 +26,13 @@ const FosterKinshipCare = () => {
 
   return (
     <>
-      <Head>
-        <title>Foster/Kinship Care Program | Pluming Eagle Lodge</title>
-        <meta
-          name="description"
-          content="A culturally safe foster care model that nurtures emotional well-being, strengthens identity, supports education, cultural connection, and ensures lasting stability."
-        />
-      </Head>
+      <SEO
+        title="Foster/Kinship Care Program | Indigenous Foster Care Alberta"
+        description="A culturally safe foster care model that nurtures emotional well-being, strengthens identity, supports education, cultural connection, and ensures lasting stability."
+        keywords="Indigenous foster care Alberta, culturally safe foster care, kinship care programs, Indigenous family placement, cultural awareness foster parents"
+        ogUrl="https://plumingeaglelodge.com/programs/foster-kinship-care"
+        canonicalUrl="https://plumingeaglelodge.com/programs/foster-kinship-care"
+      />
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <BackgroundSection attachment="fixed">

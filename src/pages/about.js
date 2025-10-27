@@ -10,6 +10,7 @@ import ImpactSection from "@/components/ImpactSection";
 import { HireMe } from "@/components/HireMe";
 import SmoothScroll from "@/components/SmoothScroll";
 import BackgroundSection from "@/components/BackgroundSection";
+import SEO from "@/components/SEO";
 
 
 
@@ -47,13 +48,13 @@ export default function About() {
 
   return (
     <>
-      <Head>
-        <title>About Pluming Eagle Lodge</title>
-        <meta
-          name="description"
-          content="Pluming Eagle Lodge, a non-institutional group home facility in Alberta, Canada"
-        />
-      </Head>
+      <SEO
+        title="About Us | Pluming Eagle Lodge - Our Mission & Values"
+        description="Learn about Pluming Eagle Lodge's mission to empower Indigenous children and youth through culturally grounded, trauma-informed programs since 2020."
+        keywords="Indigenous youth organization, cultural identity programs, Alberta child services, community support, trauma-informed care Alberta, Indigenous child welfare"
+        ogUrl="https://plumingeaglelodge.com/about"
+        canonicalUrl="https://plumingeaglelodge.com/about"
+      />
 
       <TransitionEffect />
       <SmoothScroll>

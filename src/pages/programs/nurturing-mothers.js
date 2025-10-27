@@ -4,7 +4,7 @@ import Link from "next/link";
 import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "@/components/AnimatedText";
 import PhotoCarousel from "@/components/PhotoCarousel";
-import BackgroundSection from "@/components/BackgroundSection";
+import SEO from "@/components/SEO";
 
 
 const NurturingMothers = () => {
@@ -25,13 +25,13 @@ const NurturingMothers = () => {
 
   return (
     <>
-      <Head>
-        <title>Nurturing Mothers Program | Pluming Eagle Lodge</title>
-        <meta
-          name="description"
-          content="A culturally grounded program designed to support Indigenous young mothers in their journey toward healing, parenting, and personal growth."
-        />
-      </Head>
+      <SEO
+        title="Nurturing Mothers Program | Indigenous Young Mother Support Alberta"
+        description="A culturally grounded program designed to support Indigenous young mothers in their journey toward healing, parenting, and personal growth."
+        keywords="Indigenous young mother support Alberta, culturally grounded parenting programs, Indigenous mother-child programs, healing programs young mothers, parenting mentorship Indigenous"
+        ogUrl="https://plumingeaglelodge.com/programs/nurturing-mothers"
+        canonicalUrl="https://plumingeaglelodge.com/programs/nurturing-mothers"
+      />
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <BackgroundSection attachment="fixed">

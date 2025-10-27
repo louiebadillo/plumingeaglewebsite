@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 const BackgroundSection = ({ children, className = "", attachment = 'local', image = '/pelbackground.jpg' }) => {
   const router = useRouter();
   const isContactPage = router.pathname === '/contact';
+  const isHomePage = router.pathname === '/';
   // Check if there's any content to display
   const hasContent = React.Children.count(children) > 0;
   

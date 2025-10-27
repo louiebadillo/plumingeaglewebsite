@@ -5,17 +5,18 @@ import TransitionEffect from "@/components/TransitionEffect";
 import HeroFinal from "@/components/HeroFinal";
 import ProgramsOverview from "@/components/ProgramsOverview";
 import TestimonialSlider from "@/components/TestimonialSlider";
+import SEO from "@/components/SEO";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Pluming Eagle Lodge - Empowering the Next Generation</title>
-        <meta
-          name="description"
-          content="Pluming Eagle Lodge provides comprehensive child, youth, and family care services. Empowering the next generation through compassionate support and guidance."
-        />
-      </Head>
+      <SEO
+        title="Pluming Eagle Lodge | Indigenous Child & Youth Care Services Alberta"
+        description="Culturally safe, trauma-informed care for Indigenous children, youth, and families in Alberta. Programs include group homes, early care, foster care, and support services."
+        keywords="Indigenous child care Alberta, youth services Calgary, trauma-informed care, cultural support programs, foster care Indigenous youth, Calgary child services, group home programs, early childhood care"
+        ogUrl="https://plumingeaglelodge.com"
+        canonicalUrl="https://plumingeaglelodge.com"
+      />
 
       <TransitionEffect />
             
@@ -31,10 +32,10 @@ export default function Home() {
       {/* Homepage CTA above footer */}
       <BackgroundSection>
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-700 mb-8">
+          <h2 className="text-4xl font-bold text-white mb-8">
             Ready to Make a Difference?
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
             Join us in our mission to support children, youth, and families. 
             Together, we can create lasting positive change in our communities.
           </p>
