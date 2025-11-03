@@ -61,10 +61,10 @@ export default function About() {
         <main
           className={`flex  w-full flex-col items-center justify-center`}
         >
-          <Layout className="pt-16">
+          <Layout className="pt-16 sm:pt-24">
             <AnimatedText
               text="Helping Youth to Path of Independence"
-              className="mt-12 mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-3xl xs:!text-2xl sm:mb-8 text-center"
+              className="text-gray-800 mt-12 sm:mt-20 mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-3xl xs:!text-2xl sm:mb-8 text-center"
             />
 
             {/* Photo Carousel Section - Full Width */}

@@ -34,7 +34,7 @@ const NurturingMothers = () => {
         canonicalUrl="https://plumingeaglelodge.com/programs/nurturing-mothers"
       />
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+      <main className="w-full flex flex-col items-center justify-center dark:text-light">
         <BackgroundSection attachment="fixed">
         <Layout className="pt-16">
           <AnimatedText

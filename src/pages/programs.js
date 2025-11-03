@@ -81,16 +81,16 @@ const Programs = () => {
         canonicalUrl="https://plumingeaglelodge.com/programs"
       />
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+      <main className="w-full flex flex-col items-center justify-center dark:text-light">
         <BackgroundSection attachment="fixed">
-          <div className="pt-16 px-8 md:px-12 lg:px-16 xl:px-24 w-full">
+          <div className="pt-16 sm:pt-32 px-8 md:px-12 lg:px-16 xl:px-24 w-full">
             <AnimatedText
-              text="Our Programs"
-              className="mt-12 mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-3xl xs:!text-2xl sm:mb-8 text-center"
+              text="Explore Our Programs"
+              className="mt-12 mb-16 text-gray-800 !text-6xl !leading-tight lg:!text-5xl sm:!text-3xl xs:!text-3xl sm:mb-16 text-center"
             />
-          </div>
-            <div className="w-full px-4">
-              <div className="grid grid-cols-1 gap-8">
+            
+            <div className="container mx-auto px-4">
+              <div className="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8">
                 {programs.map((program, index) => {
                   const badge = program.comingSoon ? "Coming Soon" : program.ageRange || "";
                   return (
@@ -136,6 +136,7 @@ const Programs = () => {
                 })}
               </div>
             </div>
+          </div>
         </BackgroundSection>
       </main>
     </>

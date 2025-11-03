@@ -32,10 +32,10 @@ export default function Home() {
       {/* Homepage CTA above footer */}
       <BackgroundSection>
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-8">
+          <h2 className="text-4xl font-bold text-gray-800 mb-8">
             Ready to Make a Difference?
           </h2>
-          <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Join us in our mission to support children, youth, and families. 
             Together, we can create lasting positive change in our communities.
           </p>

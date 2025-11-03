@@ -65,10 +65,10 @@ export default function About() {
       
       <main className={`flex w-full flex-col items-center justify-center dark:text-light`}>
         <BackgroundSection attachment="fixed" image="/images/sky.jpg">
-        <Layout className="pt-16 mb-24">
+        <Layout className="pt-16 sm:pt-32 mb-32">
           <AnimatedText
             text="Get In Touch"
-            className="mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8 text-center"
+            className="text-gray-800 sm:mt-8 mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-4xl xs:!text-3xl sm:mb-8 text-center"
           />
 
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl border border-solid border-dark bg-light p-6 shadow-2xl xs:p-4">
