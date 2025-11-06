@@ -86,7 +86,7 @@ const Programs = () => {
           <div className="pt-16 sm:pt-32 px-8 md:px-12 lg:px-16 xl:px-24 w-full">
             <AnimatedText
               text="Explore Our Programs"
-              className="mt-12 mb-16 text-gray-800 !text-6xl !leading-tight lg:!text-5xl sm:!text-3xl xs:!text-3xl sm:mb-16 text-center"
+              className="!text-gray-800 dark:!text-gray-800 mt-12 mb-16 !text-6xl !leading-tight lg:!text-5xl sm:!text-3xl xs:!text-3xl sm:mb-16 text-center"
             />
             
             <div className="container mx-auto px-4">
