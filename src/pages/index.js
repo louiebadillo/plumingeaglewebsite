@@ -42,7 +42,7 @@ export default function Home() {
             </p>
           </div>
 
-          <h2 className="text-4xl font-bold text-gray-800 mb-8">
+          <h2 className="text-4xl font-bold text-white mb-8">
             Ready to Make a Difference?
           </h2>
           <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
