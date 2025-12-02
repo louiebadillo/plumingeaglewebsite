@@ -99,7 +99,15 @@ export default function About() {
           {/* Overlay for better text readability */}
           <div className="absolute"></div>
           <div className="outro-content relative z-10">
-            <h2 className="text-gray-500 text-4xl font-semibold text-center mt-16 mb-32">Our Contact Information</h2>
+            <div className="mb-12 max-w-4xl mx-auto">
+            <h2 className="text-4xl text-center font-bold text-gray-700 mb-12">
+              Land Acknowledgement
+            </h2>
+            <p className="text-2xl text-gray-700 leading-relaxed text-center">
+              In the spirit of respect, reciprocity and truth, we honour and acknowledge Moh'kinsstis, and the traditional Treaty 7 territory and oral practices of the Blackfoot confederacy: Siksika, Kainai, Piikani, Stoney Nakoda Nations: Chiniki, Bearspaw, Goodstoney and Tsuut'ina Nation. We acknowledge that this territory is home to the Otipemisiwak Métis Government of the Métis Nation, Calgary Nose Hill Métis District and Calgary Elbow Métis District. Finally, we acknowledge all Nations – Indigenous and non – who live, work and play on this land, and who honour and celebrate this territory.
+            </p>
+          </div>
+            <h2 className="text-gray-800 text-4xl font-semibold text-center mt-32 mb-16">Our Contact Information</h2>
             <div className="outro-info-section">
               <div className="map-container">
                 <iframe 
